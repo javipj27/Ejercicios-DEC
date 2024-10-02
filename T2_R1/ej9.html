@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funciones.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        frase=prompt("Introduce una frase y te digo la cantidad de vocales que hay ");
+        let i;
+        contador=0;
+        for(i = 0; i<frase.length ;i++ ){
+            if (frase[i] === "a"||frase[i]==="e"||frase[i]==="i"||frase[i]==="o"||frase[i]==="u") {
+                contador++;
+             }
+        }
+        document.write("De tu frase, "+contador+" letras son vocales");
+    </script>
+</body>
+</html>

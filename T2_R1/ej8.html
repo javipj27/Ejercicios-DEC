@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funciones.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        frase=prompt("Introduce una frase y te digo la cantidad de letras a que hay ");
+        let i;
+        contador=0;
+        for(i = 0; i<frase.length ;i++ ){
+            if (frase[i] === "a") {
+                contador++;
+             }
+        }
+        document.write("La letra a aparece "+contador+" veces en la frase");
+    </script>
+</body>
+</html>

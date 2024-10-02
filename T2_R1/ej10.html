@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funciones.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        frase=prompt("Introduce una frase y te digo la cantidad de cada vocal hay ");
+        let x;
+        let a=0;
+        let e=0;
+        let i=0;
+        let o=0;
+        let u=0;
+        for(x = 0; x<frase.length ;x++ ){
+            if (frase[x] === "a"){a++;}
+            if(frase[x]==="e"){e++;}
+            if(frase[x]==="i"){i++;}
+            if(frase[x]==="o"){o++}
+            if(frase[x]==="u"){u++}
+        }
+        document.write("La letra a aparece " + a + " veces" + "<br>");
+        document.write("La letra e aparece " + e + " veces" + "<br>");
+        document.write("La letra i aparece " + i + " veces" + "<br>");
+        document.write("La letra o aparece " + o + " veces" + "<br>");
+        document.write("La letra u aparece " + u + " veces" + "<br>");   
+    </script>
+</body>
+</html>

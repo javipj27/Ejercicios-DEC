@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funciones.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor=parseInt(prompt("Introduce una opcion: \n 1.Potencia \n 2.Raíz \n 3.Potencia \n 4.Trigonometría" ));
+        switch(valor){
+            case 1:
+                let x=parseInt(prompt("Introduce la base"));
+                let y=parseInt(prompt("Introduce el exponente"));
+                let potencia=Math.pow(x,y);
+                document.write("La potencia de "+ x +"elevado a " + y + " es: "+potencia);
+            break;
+            case 2:
+                let numero=parseInt(prompt("Introduce un numero no negativo"));
+                let raiz= Math.sqrt(numero);
+                document.write("La raiz cuadrada de "+numero+" es: "+ raiz);
+            break;
+            case 3:
+                let decimal=parseFloat(prompt("Introduce un numero decimal"));
+                let redondeo=Math.round(decimal);
+                document.write("EL redondeo del numero "+decimal+" mas proximo es "+redondeo);
+            break;
+            case 4:
+                let angulo=parseInt(prompt("Introduce un angulo y se hara el seno,coseno y tangente"));
+                let seno=Math.sin(angulo);
+                let coseno=Math.cos(angulo);
+                let tangente=Math.tan(angulo);
+                document.write("El angulo "+angulo+ ": el seno es "+seno+"; el coseno es  "+coseno+"; la tangente es "+tangente);
+            break;
+            default:
+                document.write("El numero introducido no es valido en el menu");
+        }
+
+    </script>
+</body>
+</html>
