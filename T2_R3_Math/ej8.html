@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funciones.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <img id="imagen" width="600px">
+
+<script>
+    var imagenes = ["img/1.jpeg", "img/2.png", "img/3.webp"];
+    var aleatorio = Math.floor(Math.random() * imagenes.length);
+    document.getElementById("imagen").src = imagenes[aleatorio];
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funciones.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let entrada = true;
+
+    while (entrada) {
+        let cateto1 = prompt("Introduce la medida para hacer la hipotenusa de un triangulo rectangulo y cuando des enter pare de operar");
+        let cateto2 = prompt("Introduce el cateto 2");
+        let pregunta = prompt("¿Quieres hacer otra hipotenusa?");
+        let hipo = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));    
+        window.alert("La hipotenusa es " + hipo);
+        if (pregunta !== "si") {
+            entrada = false;
+        }
+    }
+    console.log("Estas son todas las hipotenusas que has calculado");
+    </script>
+</body>
+</html>

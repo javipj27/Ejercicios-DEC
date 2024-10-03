@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reloj() {
+            let ahora = new Date();//creo la fecha ahora
+            // cojo los minutos,horas y segundos
+            console.log(ahora.getHours() + ':' +ahora.getMinutes() + ':' +ahora.getSeconds());} 
+            //el setinterval llama a la funcion a cada segundo=1000 milisegundos
+        setInterval(reloj, 1000);
+    </script>
+</body>
+</html>
