@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="cursor: pointer;" onclick="abrir()">Haz clic aqui</h1>
+
+    <script>
+        function abrir() {
+            let opcion = "width=350,height=350,top=100,left="; 
+            for (let i = 1; i <= 5; i++) {
+                let opciones = opcion + (210 * i); //para que cuando abra las ventanas se muevan y no esten justo una encima de otra
+                let ventana = window.open("", "", opciones);
+
+                ventana.document.write(`
+                    <h1>Ventana ${i}</h1>
+                    <button onclick="window.close()">Cerrar</button>
+                `);
+            }
+        }
+    </script>
+</body>
+</html>

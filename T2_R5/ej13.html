@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ventana;
+
+        function abrir(){        
+            let titulo = prompt("Escribe un título para la nueva ventana:");
+            let opciones = "width=500,height=400,top=0,left=" + (screen.width - 500);
+            ventana = window.open("", "ventana", opciones);
+            ventana.document.write("<h1>" + titulo + "</h1>");
+        }
+
+            function cerrar() {
+              if (ventana) {
+                ventana.close();
+              }
+            }
+
+       </script>
+       <button onclick="abrir()">Abrir Ventana</button>
+       <button onclick="cerrar()"> Cerrrar Ventana</button>
+    </script>
+</body>
+</html>

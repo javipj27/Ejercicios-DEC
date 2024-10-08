@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let contador = 5; 
+        document.write("Hemos cambiado de ubicación esta página. En breves momentos será redireccionado... <span id='contador'>" + contador + "</span><br>");
+        const intervalo = setInterval(() => {
+            contador--;
+            //solo actualiza el contador, no repite el texto
+            document.getElementById('contador').innerText = contador;
+            if (contador < 0) {
+                clearInterval(intervalo); 
+                window.location.href = "https://www.pccomponentes.com/";
+            }
+        }, 1000);
+
+    </script>
+</body>
+</html>
