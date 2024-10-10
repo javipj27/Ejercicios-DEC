@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Propiedad</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody id="Tabla"> <!--Le ponemos id para luego meter los valores-->
+        </tbody>
+    </table>
+
+    <script>
+            //hacemos un array con subarrays con 2 elementos
+            let Nav = [
+                ["Nombre Navegador", navigator.appName],
+                ["Versión del Navegador", navigator.appVersion],
+                ["Codigo del Navegador", navigator.appCodeName],
+                ["Agente de Usuario", navigator.userAgent],
+                ["Plataforma", navigator.platform],
+                ["Lenguaje", navigator.language],
+                ["Cookies", navigator.cookieEnabled ? "Sí" : "No"],
+                ["Online", navigator.onLine ? "Sí" : "No"],
+                ["Ancho", screen.width + " px"],
+                ["Alto", screen.height + " px"],
+                ["Color Fondo", screen.colorDepth + " bits"],
+                ["Ancho de ventana", window.innerWidth + " px"],
+                ["Alto de ventana", window.innerHeight + " px"]
+            ];
+
+            let tabla = document.getElementById('Tabla');
+            for (let i = 0; i < Nav.length; i++) { //nos recorremos el array 
+                //vamos creando filas e insertando los datos
+                let fila = document.createElement('tr');
+                fila.innerHTML = `<td>${Nav[i][0]}</td><td>${Nav[i][1]}</td>`;
+                tabla.appendChild(fila);
+            }
+    </script>
+
+</body>
+</html>

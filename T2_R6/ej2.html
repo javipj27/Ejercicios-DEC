@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Propiedad</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody id="tabla"> <!--Le ponemos id para luego meter los valores-->
+        </tbody>
+    </table>
+
+    <script>
+            //hacemos un array con subarrays con 2 elementos
+            let pantalla = [
+                    ["Ancho de pantalla", screen.width + " px"],
+                    ["Alto de pantalla", screen.height + " px"],
+                    ["Ancho disponible", screen.availWidth + " px"],
+                    ["Alto disponible", screen.availHeight + " px"],
+                    ["Profundidad de color", screen.colorDepth + " bits"],
+                    ["Resolución de píxeles", screen.pixelDepth + " bits"],
+                    ["Ancho de ventana", window.innerWidth + " px"],
+                    ["Alto de ventana", window.innerHeight + " px"]
+                ];
+
+            let tabla = document.getElementById('tabla');
+            for (let i = 0; i < pantalla.length; i++) { //nos recorremos el array 
+                //vamos creando filas e insertando los datos
+                let fila = document.createElement('tr');
+                fila.innerHTML = `<td>${pantalla[i][0]}</td><td>${pantalla[i][1]}</td>`;
+                tabla.appendChild(fila);
+            }
+    </script>
+
+</body>
+</html>
